@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    background-color: lightgray;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.6fr 1.1fr 1.1fr 1.1fr 1.1fr;
+    grid-template-rows: 0.7fr  2.7fr 0.6fr;
+    grid-template-areas: "sidebar nav nav nav nav"
+                         "sidebar conteudo1 conteudo2 conteudo3 conteudo4"
+                         "sidebar footer footer footer footer";
+    grid-gap: 1em;
+    padding: 1.5em;
+}
+
+p {
+    color: black;
+    background-color: transparent;
+}
+
+#nav {
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 2.8em;
+    font-weight: 300;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    padding: 0.5em;
+    grid-area: nav;
+    border-radius: 0.5em;
+    background-image: url("side_img/OIP\ \(3\).jpg");
+    background-position: center;
+    background-size:contain;
+    background-color: lightgreen;
+}
+
+#sidebar {
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    grid-area: sidebar;
+    border-radius: 0.5em;
+    align-content: center;
+    
+}
+
+#imagem-lateral {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: lightskyblue;
+}
+
+#img-lateral {
+    background-color: lightskyblue;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1.5em;
+    grid-area: conteudo1;
+    border-radius: 0.5em;
+    border: 1px solid red;
+}
+
+#cad-form,
+#edit-form,
+#search-form,
+#result-search {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    height: 70%;
+    border-radius: 15px;
+    background-color: lightseagreen;
+    border: 1px solid green;
+}
+
+input {
+    width: 70%;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    margin: 0.5em;
+    outline: unset;
+    border: unset;
+}
+
+.button {
+    display: flex;
+    padding: 1rem;
+    margin-top: 1rem;
+    justify-content: space-around;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+#btn {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.2rem 0.3rem;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 24px;
+    background-color: aquamarine;
+    color: black;
+}
+
+#btn:hover {
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    transition: 0.2s
+}
+
+.editar {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1.5em;
+    grid-area: conteudo2;
+    border-radius: 0.5em;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.pesquisar {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1.5em;
+    grid-area: conteudo3;
+    border-radius: 0.5em;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1.5em;
+    grid-area: conteudo4;
+    border-radius: 0.5em;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+#result-form {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;;
+}
+
+#footer {
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-top: 0.25rem;
+    grid-area: footer;
+    background-color: transparent;
+}
