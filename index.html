@@ -1,120 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">    
-    <title>Gerenciador de Séries 3.0.1</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet" />    
+    <title>Gerenciador de Séries 3.0.1</title>
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
 <body>
-    <div class="container">
-        <div id="nav">
-            
-            <p>Gerenciador de Séries</p>
-            <p>Cadastre sua série preferida</p>
-            
-        </div>
+    <div class="max-container">
+
+        <div class="sidebar-left">sidebar-left</div>
+
+        <div class="cabecalho">cabeçalho</div>          
         
-        <div id="sidebar">
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/batman1.jpg" alt="batman">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/onepiece1.jpg" alt="onepiece">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/superman1.jpg" alt="superman">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/vingadores1.webp" alt="vingadores">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/x-men1.jpg" alt="x-men">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/anime2.jpg" alt="anime">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/anime3.jpg" alt="sailormoon">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/anime1.jpg" alt="naruto">
-            </div>
-            <div id="imagem-lateral">
-                <img id="img-lateral" src="side_img/x-men2.webp" alt="x-men">
-            </div>
-        </div>
-
-        <div class="cadastro"> <p>Cadastrar</p>
-            
-            <form id="cad-form" action="">
-                <p>Série</p>
-                <input type="text" placeholder="Cadastrar Série">
-                <p>Temporada</p>
-                <input type="number" min="1" max="150">
-                <p>Episódio</p>
-                <input type="number" min="1" max="2000">
-             
-                <div class="button">
-                    <button type="button" id="btn">Cadastrar</button>
-                    <button type="button" id="btn">Limpar</button>
-                </div>
-            </form>
-        </div>
+        <div class="form1"> form1</div>
         
-        <div class="editar"> <p>Editar</p> 
-            <form id="edit-form" action="">
-                <p>Série</p>
-                <input type="text" placeholder="Editar Série">
-                <p>Temporada</p>
-                <input type="number" min="1" max="150">
-                <p>Episódio</p>
-                <input type="number" min="1" max="2000">
+        <div class="form2"> form2</div>
 
-                <div class="button">
-                    <button type="button" id="btn">Editar</button>
-                    <button type="button" id="btn">Limpar</button>
-                </div>
-            </form> 
-        </div>
+        <div class="form3"> form3</div>
 
-        <div class="pesquisar"> <p>Pesquisar</p> 
-            <form id="search-form" action="">
-                <p>Série</p>
-                <input type="text" placeholder="Pesquisar Série">
-                <p>Temporada</p>
-                <input type="number" min="1" max="150">
-                <p>Episódio</p>
-                <input type="number" min="1" max="2000">
+        <div class="form4"> form4</div>
 
-                <div class="button">
-                    <button type="button" id="btn">Pesquisar</button>
-                    <button type="button" id="btn">Limpar</button>
-                </div>
-            </form>     
-        </div>
+        <div class="footer">rodapé</div>
 
-        <div class="resultado"> <p>Resultado</p> 
-            <form id="search-form" action="">
-                <textarea name="resulT" id="result-search" cols="50" rows="10"></textarea>
-            
-                <div class="button">
-                    <button type="button" id="btn">Pesquisar</button>
-                    <button type="button" id="btn">Limpar</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="footer">Copyright 2023 - Roberto Brito de Oliveira</div>
-    
+        <div class="sidebar-rigth">sidebar-rigth</div>
+        
     </div>
 </body>
 </html>

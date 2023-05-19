@@ -1,23 +1,93 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #D8BFD8; 
 }
 
-.container {
-    display: grid;
+body {
+    width: 100vw;
     height: 100vh;
-    grid-template-columns: 0.6fr 1.1fr 1.1fr 1.1fr 1.1fr;
-    grid-template-rows: 0.7fr 2.7fr 0.6fr;
-    grid-template-areas: "sidebar nav nav nav nav"
-                         "sidebar conteudo1 conteudo2 conteudo3 conteudo4"
-                         "sidebar footer footer footer footer";
-    grid-gap: 1em;
-    padding: 1.5em;
+    background: blue;
 }
 
-p {
+.max-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr;
+    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+    grid-template-areas: "sidebar-left cabecalho cabecalho cabecalho cabecalho sidebar-rigth"
+                         "sidebar-left form1 form2 form3 form4 sidebar-rigth"
+                         "sidebar-left footer footer footer footer sidebar-rigth";
+    grid-gap: 1em;
+    background: black;
+}
+.sidebar-left {
+    grid-area: sidebar-left;
+    background-color: lightgreen;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: lightcoral;
+}
+
+.form1 {
+    grid-area: form1;
+    background-color: lightskyblue;
+}
+
+.form2 {
+    grid-area: form2;
+    background-color: lightpink;
+}
+
+.form3 {
+    grid-area: form3;
+    background-color: lightgoldenrodyellow;
+}
+
+.form4 {
+    grid-area: form4;
+    background-color: lightslategray;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightgray;
+}
+
+.sidebar-rigth {
+    grid-area: sidebar-rigth;
+    background-color: lightgreen;
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar-left,
+    .sidebar-rigth {
+        display: none;
+    }
+    .max-container {
+        grid-template-areas: "cabecalho" 
+                             "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "footer";
+                             
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+p, h3 {
     color: black;
     background-color: transparent;
 }
@@ -37,7 +107,7 @@ p {
     
 }
 
-#sidebar {
+.sidebar {
     font-family: 'Bruno Ace SC', 'cursive';
     font-size: 1.5em;
     font-weight: 300;
@@ -72,7 +142,7 @@ p {
 .pesquisar > p,
 .resultado > p {
     text-align: center;
-    /*border: 2px double black;*/
+    border: 2px double black;
     border-style: outset;
     border-radius: 0.5em;
     padding: 0.5em;
@@ -88,8 +158,9 @@ p {
     margin-bottom: 1.55em;
     height: 70%;
     border-radius: 0.5em;
+    border: 2px solid black;
     border-style: outset;
-    /*background-color: #f1ecec;*/
+    background-color: #f1ecec;
     background-color: #D8BFD8;
 }
 #result-search {
@@ -125,7 +196,7 @@ input {
     align-items: center;
     font-size: 1rem;
     line-height: 24px;
-    /*background-color: #D8BFD8;*/
+    background-color: #D8BFD8;
     background-color: white;
     color: black;
 }
@@ -191,4 +262,7 @@ input {
     padding-bottom: 0;
     margin-top: 0.25rem;
     grid-area: footer;
-}
+}*/
+
+
+
