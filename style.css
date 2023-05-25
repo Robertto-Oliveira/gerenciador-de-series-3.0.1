@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -6,7 +7,6 @@
 body {
     width: 100vw;
     height: 100vh;
-    padding: 10px;
     background: blue;
 }
 
@@ -16,14 +16,15 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr;
     grid-template-rows: 0.3fr 2.4fr 0.3fr;
-    grid-template-areas: "sidebar-left cabecalho cabecalho cabecalho cabecalho sidebar-right"
-                         "sidebar-left form1 form2 form3 form4 sidebar-right"
-                         "sidebar-left footer footer footer footer sidebar-right";
+    grid-template-areas: "sidebar-esquerda cabecalho cabecalho cabecalho cabecalho sidebar-direita"
+                         "sidebar-esquerda form1 form2 form3 form4 sidebar-direita"
+                         "sidebar-esquerda footer footer footer footer sidebar-direita";
     grid-gap: 0.5em;
     background: black;
 }
-.sidebar-left {
-    grid-area: sidebar-left;
+
+.sidebar-esquerda {
+    grid-area: sidebar-esquerda;
     background-color: lightgreen;
 }
 
@@ -57,28 +58,36 @@ body {
     background-color: lightgray;
 }
 
-.sidebar-right {
-    grid-area: sidebar-rigth;
+.sidebar-direita {
+    grid-area: sidebar-direita;
     background-color: lightgreen;
 }
 
+#result {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .cabecalho {
-    
+    width: 100%;
     font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
     color: white;
     font-weight: 300;
     border-radius: 0.5em;
     text-align: center;
     grid-area: cabecalho;
+    
     /*background-image: url("side_img/OIP3.jpg");
     -webkit-text-stroke: 0.5px black;
     background-position: center;
     background-size:contain;*/
 }
 
-@media screen and (max-width: 480px) {
-    .sidebar-left,
-    .sidebar-right {
+@media screen  and (max-width: 480px) {
+    .sidebar-esquerda,
+    .sidebar-direita {
         display: none;
     }
     .max-container {
@@ -87,9 +96,8 @@ body {
                              "form2"
                              "form3"
                              "form4"
-                             "footer";
+                             "footer";                             ;
         grid-template-columns: 1fr;
-        
     }
 
     h2, h3, p {
@@ -100,8 +108,9 @@ body {
     }
 
     .cabecalho {
-        width: 90%;
-        padding: 2em;
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
         font-size: 10px;
         font-weight: 300;
         border-radius: 0.5em;
@@ -115,36 +124,140 @@ body {
     .form3,
     .form4 {
         text-align: center;
-        width: 84.5%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 2em;
+        padding: 2rem;
         font-family: 'Roboto', sans-serif;
         border-radius: 0.5em;
         margin: 0 10px 0 10px;
+        grid-template-columns: 1fr;
+        float: left;
     }
     
     .footer {
         text-align: center;
-        font-size: 1em;
-        width: 87%;
+        font-size: 1rem;
+        width: 100%;
         margin: 0 10px;
         font-family: 'Bruno Ace SC', 'cursive';
-        padding: 2em;
+        padding: 2rem;
         border-radius: 0.5em;
+    }
+
+    #input-temp,
+    #input-episode {
+        width: 20%;
+        margin: 0 auto;
+        height: 2em;
+    }
+
+    #input-serie {
+        height: 2em;
+    }
+}
+
+@media screen  and (max-width: 1440px) {
+    
+    .max-container {
+        grid-template-areas: "sidebar-esquerda"
+                             "cabecalho"
+                             "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "footer"
+                             "sidebar-direita";                             ;
+        
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h2, h3, p {
+        padding: 0.5em;
+        font-family: 'Bruno Ace SC', 'cursive';
+        text-align: center;
+        font-size: 1.15rem;
+    }
+
+    .cabecalho {
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+        font-size: 10px;
+        font-weight: 300;
+        border-radius: 0.5em;
+        background-size: cover;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .form1,
+    .form2,
+    .form3,
+    .form4 {
+        text-align: center;
+        width: 40%;
+        padding: 2rem;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 0.5em;
+        margin: 0 10px 0 10px;
+        
     }
     
-    .sidebar-left {
+    .footer {
+        text-align: center;
+        font-size: 1rem;
         width: 100%;
-        height: 100vh;
-        grid-area: sidebar-left;
+        margin: 0 10px;
+        font-family: 'Bruno Ace SC', 'cursive';
+        padding: 2rem;
         border-radius: 0.5em;
-        align-content: center;
-        display: flex;
-        flex-direction: column;
-        background-position: center;
-        background-size: cover;
     }
+
+    #input-temp,
+    #input-episode {
+        width: 5.5em;
+        margin: 0 auto;
+        height: 2em;
+    }
+
+    #input-serie {
+        height: 2em;
+        width: 35em;
+    }
+}
+ 
+
+
+
+
+
+
+/*.sidebar-left {
+    width: 100%;
+    height: 100vh;
+    grid-area: sidebar-left;
+    border-radius: 0.5em;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+}
+.sidebar-right {
+    width: 100%;
+    height: 100vh;
+    grid-area: sidebar-right;
+    border-radius: 0.5em;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+}*/
+
 
 /*#imagem-lateral-esquerda {
     width: 8vw;
@@ -156,18 +269,8 @@ body {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
 }*/
-    .sidebar-right {
-        width: 100%;
-        height: 100vh;
-        grid-area: sidebar-right;
-        border-radius: 0.5em;
-        align-content: center;
-        display: flex;
-        flex-direction: column;
-        background-position: center;
-        background-size: cover;
-    }
-}
+    
+
 /*#imagem-lateral-direita {
     width:8vw;
     display: flex;
