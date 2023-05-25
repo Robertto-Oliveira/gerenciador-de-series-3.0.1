@@ -85,78 +85,6 @@ body {
     background-size:contain;*/
 }
 
-@media screen  and (max-width: 480px) {
-    .sidebar-esquerda,
-    .sidebar-direita {
-        display: none;
-    }
-    .max-container {
-        grid-template-areas: "cabecalho"
-                             "form1"
-                             "form2"
-                             "form3"
-                             "form4"
-                             "footer";                             ;
-        grid-template-columns: 1fr;
-    }
-
-    h2, h3, p {
-        padding: 0.5em;
-        font-family: 'Bruno Ace SC', 'cursive';
-        text-align: center;
-        font-size: 1.15rem;
-    }
-
-    .cabecalho {
-        text-align: center;
-        width: 100%;
-        padding: 2rem;
-        font-size: 10px;
-        font-weight: 300;
-        border-radius: 0.5em;
-        background-size: cover;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-
-    .form1,
-    .form2,
-    .form3,
-    .form4 {
-        text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        font-family: 'Roboto', sans-serif;
-        border-radius: 0.5em;
-        margin: 0 10px 0 10px;
-        grid-template-columns: 1fr;
-        float: left;
-    }
-    
-    .footer {
-        text-align: center;
-        font-size: 1rem;
-        width: 100%;
-        margin: 0 10px;
-        font-family: 'Bruno Ace SC', 'cursive';
-        padding: 2rem;
-        border-radius: 0.5em;
-    }
-
-    #input-temp,
-    #input-episode {
-        width: 20%;
-        margin: 0 auto;
-        height: 2em;
-    }
-
-    #input-serie {
-        height: 2em;
-    }
-}
-
 @media screen  and (max-width: 1440px) {
     
     .max-container {
@@ -230,6 +158,81 @@ body {
 }
  
 
+
+
+
+
+@media screen  and (max-width: 480px) {
+    .sidebar-esquerda,
+    .sidebar-direita {
+        display: none;
+    }
+    .max-container {
+        grid-template-areas: "cabecalho"
+                             "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "footer";                             ;
+        grid-template-columns: 1fr;
+    }
+
+    h2, h3, p {
+        padding: 0.5em;
+        font-family: 'Bruno Ace SC', 'cursive';
+        text-align: center;
+        font-size: 1.15rem;
+    }
+
+    .cabecalho {
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+        font-size: 10px;
+        font-weight: 300;
+        border-radius: 0.5em;
+        background-size: cover;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .form1,
+    .form2,
+    .form3,
+    .form4 {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 0.5em;
+        margin: 0 10px 0 10px;
+        grid-template-columns: 1fr;
+        float: left;
+    }
+    
+    .footer {
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+        margin: 0 10px;
+        font-family: 'Bruno Ace SC', 'cursive';
+        padding: 2rem;
+        border-radius: 0.5em;
+    }
+
+    #input-temp,
+    #input-episode {
+        width: 20%;
+        margin: 0 auto;
+        height: 2em;
+    }
+
+    #input-serie {
+        height: 2em;
+    }
+}
 
 
 
