@@ -11,8 +11,8 @@ body {
 }
 
 .max-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 0.5fr 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr;
     grid-template-rows: 0.3fr 2.4fr 0.3fr;
@@ -28,9 +28,28 @@ body {
     background-color: lightgreen;
 }
 
+h2 {
+    padding-top: 1em;
+    font-family: 'Bruno Ace SC', 'cursive';
+    text-align: center;
+    font-size: 1.9rem;
+}
+
 .cabecalho {
+    width: 100vw;
+    height: 150px;
+    font-family: 'Bruno Ace SC', 'cursive';
+    font-size: 1.5em;
+    color: white;
+    font-weight: 300;
+    border-radius: 0.5em;
+    text-align: center;
     grid-area: cabecalho;
-    background-color: lightcoral;
+    /*background-color: lightcoral;*/
+    background-image: url("side_img/OIP3.jpg");
+    -webkit-text-stroke: 0.5px black;
+    background-position: center;
+    background-size:contain;
 }
 
 .form1 {
@@ -69,40 +88,16 @@ body {
     flex-direction: column;
 }
 
-.cabecalho {
-    width: 100%;
-    font-family: 'Bruno Ace SC', 'cursive';
-    font-size: 1.5em;
-    color: white;
-    font-weight: 300;
-    border-radius: 0.5em;
-    text-align: center;
-    grid-area: cabecalho;
-    
-    /*background-image: url("side_img/OIP3.jpg");
-    -webkit-text-stroke: 0.5px black;
-    background-position: center;
-    background-size:contain;*/
-}
-
 @media screen  and (max-width: 1440px) {
     
-    .max-container {
-        grid-template-areas: "sidebar-esquerda"
-                             "cabecalho"
-                             "form1"
-                             "form2"
-                             "form3"
-                             "form4"
-                             "footer"
-                             "sidebar-direita";                             ;
-        
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    h2 {
+        padding-top: 1em;
+        font-family: 'Bruno Ace SC', 'cursive';
+        text-align: center;
+        font-size: 1.9rem;
     }
 
-    h2, h3, p {
+    p {
         padding: 0.5em;
         font-family: 'Bruno Ace SC', 'cursive';
         text-align: center;
@@ -112,13 +107,15 @@ body {
     .cabecalho {
         text-align: center;
         width: 100%;
-        padding: 2rem;
-        font-size: 10px;
+        padding: 0 2rem;
+        height: 150px;
         font-weight: 300;
         border-radius: 0.5em;
         background-size: cover;
         margin-left: 10px;
-        margin-top: 5px;
+        -webkit-text-stroke: 0.5px black;
+        background-position: center;
+        background-size:contain;
     }
 
     .form1,
@@ -126,14 +123,15 @@ body {
     .form3,
     .form4 {
         text-align: center;
-        width: 40%;
+        width: 16rem;
+        height: 90%;
         padding: 2rem;
+        margin: 1.5em;
         font-family: 'Roboto', sans-serif;
         border-radius: 0.5em;
-        margin: 0 10px 0 10px;
-        
+        font-size: 1.5rem;
     }
-    
+
     .footer {
         text-align: center;
         font-size: 1rem;
@@ -153,14 +151,10 @@ body {
 
     #input-serie {
         height: 2em;
-        width: 35em;
+        width: 65%;
     }
 }
  
-
-
-
-
 
 @media screen  and (max-width: 480px) {
     .sidebar-esquerda,
@@ -177,11 +171,24 @@ body {
         grid-template-columns: 1fr;
     }
 
-    h2, h3, p {
+    p {
         padding: 0.5em;
         font-family: 'Bruno Ace SC', 'cursive';
         text-align: center;
         font-size: 1.15rem;
+    }
+
+    h2 {
+        padding-top: 0;
+        font-family: 'Bruno Ace SC', 'cursive';
+        text-align: center;
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-family: 'Bruno Ace SC', 'cursive';
+        text-align: center;
+        font-size: 1.3rem;
     }
 
     .cabecalho {
@@ -231,6 +238,8 @@ body {
 
     #input-serie {
         height: 2em;
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
@@ -238,7 +247,7 @@ body {
 
 
 
-/*.sidebar-left {
+/*.sidebar-esquerda {
     width: 100%;
     height: 100vh;
     grid-area: sidebar-left;
@@ -249,7 +258,7 @@ body {
     background-position: center;
     background-size: cover;
 }
-.sidebar-right {
+.sidebar-direita {
     width: 100%;
     height: 100vh;
     grid-area: sidebar-right;
