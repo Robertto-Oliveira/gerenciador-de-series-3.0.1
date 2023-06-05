@@ -89,7 +89,26 @@ h2 {
 }
 
 @media screen  and (max-width: 2560px) {
-    
+
+    .sidebar-esquerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sidebar-direita {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        
+        
+    }    
+       
     h2 {
         padding-top: 1em;
         font-family: 'Bruno Ace SC', 'cursive';
@@ -157,7 +176,26 @@ h2 {
 
     .sidebar-esquerda {
         background-color: brown;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+    
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        
+    }  
+    
+    .sidebar-direita {
+        background-color: brown;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    
     
     h2 {
         padding-top: 1em;
