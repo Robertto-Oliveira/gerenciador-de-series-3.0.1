@@ -75,6 +75,16 @@ h2 {
     background-color: lightgoldenrodyellow;
 }
 
+.btn {
+    border: none;
+    position: relative;
+    padding: 0.2rem 0.3rem;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 24px;
+    display: flex;
+}
+
 .footer {
     color: white;
     grid-area: footer;
@@ -165,6 +175,27 @@ h2 {
         background-position: bottom;
         background-image: transparent;
     }
+
+    .btn-cadastrar,
+    .btn-limpar {
+        
+        display: flex;
+        padding: 1rem;
+        font-family: 'Bruno Ace SC', 'cursive';
+        font-weight: bold;
+        color: rgb(66, 66, 66);
+    }
+
+    .btn-cadastrar:hover,
+    .btn-limpar:hover {
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        transition: 0.2s;
+        background-color: #778899;
+        color: white;
+    }
+    
     .form2 {
         background-image: url("side_img/home-cinema-rafiki-360.png");
         background-size: cover;
@@ -173,6 +204,25 @@ h2 {
         background-repeat: no-repeat;
         background-position: bottom;
         background-image: transparent;
+    }
+
+    .btn-editar,
+    .btn-cancelar {
+        display: flex;
+        padding: 1rem;
+        font-family: 'Bruno Ace SC', 'cursive';
+        font-weight: bold;
+        color: darkblue;
+    }
+    
+    .btn-editar:hover,
+    .btn-cancelar:hover {
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        color:white;
+        background-color: lightskyblue;
+        transition: 0.2s;
     }
 
     .form3 {
@@ -185,6 +235,25 @@ h2 {
         background-image: transparent;
     }
 
+    .btn-pesquisar,
+    .btn-cancel {
+        display: flex;
+        padding: 1rem;
+        font-family: 'Bruno Ace SC', 'cursive';
+        font-weight: bold;
+        color: rgb(187, 98, 113);
+    }
+    
+    .btn-pesquisar:hover,
+    .btn-cancel:hover {
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        color: white;
+        background: lightpink;
+        transition: 0.2s;
+    }
+    
     .form4 {
         background-image: url("side_img/Drive-in\ movie\ theater-rafiki\ \(2\).png");
         background-size: cover;
@@ -195,6 +264,30 @@ h2 {
         background-image: transparent;
     }
 
+    .btn {
+        justify-content: space-around;
+        background: transparent;
+        margin-top: 17rem;
+    }
+
+    .btn-cadastrar:hover,
+    .btn-limpar:hover {
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        /*color: brown;
+        background-color: #D8BFD8;*/
+        transition: 0.2s;
+    }
+
+    .btn-cadastrar,
+    .btn-limpar {
+        display: flex;
+        padding: 1rem;
+        font-family: 'Bruno Ace SC', 'cursive';
+        font-weight: bold;
+    }
+    
     .footer {
         text-align: center;
         font-weight: 300;
@@ -212,11 +305,11 @@ h2 {
     #input-episode {
         width: 7rem;
         margin: 0 auto;
-        height: 2em;
+        height: 2.5em;
     }
 
     #input-serie {
-        height: 2em;
+        height: 2.5em;
         width: 75%;
     }
 }
@@ -228,7 +321,6 @@ h2 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        ;
     }
     
     #img-1,
@@ -304,11 +396,11 @@ h2 {
     #input-episode {
         width: 7rem;
         margin: 0 auto;
-        height: 2em;
+        height: 2.5em;
     }
 
     #input-serie {
-        height: 2em;
+        height: 2.5em;
         width: 75%;
     }
 }
@@ -599,7 +691,6 @@ h2 {
 
 @media screen  and (max-width: 1024px) {
 
-    
     .sidebar-esquerda,
     .sidebar-direita {
         display: none;
@@ -704,10 +795,7 @@ h2 {
         background-position: center;
         background-size:contain;
     }
-
     
-
-
     .form1,
     .form2,
     .form3,
@@ -747,6 +835,7 @@ h2 {
 }
 
 @media screen  and (max-width: 640px) {
+    
     .sidebar-esquerda,
     .sidebar-direita {
         display: none;
@@ -806,7 +895,6 @@ h2 {
         border-radius: 0.5em;
         margin: 0 10px 0 10px;
         grid-template-columns: 1fr;
-        
     }
     
     .footer {
